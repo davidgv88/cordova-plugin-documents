@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-documents" version="0.0.1">
+    <name>Documents</name>
+    <description>Cordova Documents Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,device,documents</keywords>
+    
+    <platform name="windows">
+        <config-file target="package.windows.appxmanifest" parent="/Package/Capabilities">
+            <Capability Name="documentsLibrary" />
+        </config-file>
+    </platform>
+</plugin>
