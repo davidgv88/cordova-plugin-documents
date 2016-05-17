@@ -10,5 +10,15 @@
         <config-file target="package.windows.appxmanifest" parent="/Package/Capabilities">
             <Capability Name="documentsLibrary" />
         </config-file>
+        
+        <config-file target="package.windows.appxmanifest" parent="/Package/Applications/Application/Extensions">
+            <Extension Category="windows.fileTypeAssociation">
+                <FileTypeAssociation Name="catalogodigital">
+                    <SupportedFileTypes>
+                        <FileType>.memoracatalog</FileType>
+                    </SupportedFileTypes>
+                </FileTypeAssociation>
+            </Extension>
+        </config-file>
     </platform>
 </plugin>
