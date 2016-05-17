@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-plugin-documents" version="0.0.1">
+        id="cordova-plugin-documents" version="0.0.3">
     <name>Documents</name>
     <description>Cordova Documents Plugin</description>
     <license>Apache 2.0</license>
@@ -15,7 +15,7 @@
             <Extension Category="windows.fileTypeAssociation">
                 <FileTypeAssociation Name="catalogodigital">
                     <SupportedFileTypes>
-                        <FileType>.memoracatalog</FileType>
+                        <FileType>.pdf</FileType>
                     </SupportedFileTypes>
                 </FileTypeAssociation>
             </Extension>
