@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-plugin-documents" version="0.0.3">
+        id="cordova-plugin-documents" version="0.0.4">
     <name>Documents</name>
     <description>Cordova Documents Plugin</description>
     <license>Apache 2.0</license>
     <keywords>cordova,device,documents</keywords>
     
     <platform name="windows">
-        <config-file target="package.windows.appxmanifest" parent="/Package/Capabilities">
+        <config-file target="package.appxmanifest" parent="/Package/Capabilities">
             <Capability Name="documentsLibrary" />
         </config-file>
         
-        <config-file target="package.windows.appxmanifest" parent="/Package/Applications/Application/Extensions">
+        <config-file target="package.appxmanifest" parent="/Package/Applications/Application/Extensions" versions="<10.0.0">
             <Extension Category="windows.fileTypeAssociation">
                 <FileTypeAssociation Name="catalogodigital">
                     <SupportedFileTypes>
@@ -19,6 +19,16 @@
                     </SupportedFileTypes>
                 </FileTypeAssociation>
             </Extension>
+        </config-file>
+        
+        <config-file target="package.appxmanifest" parent="/Package/Applications/Application/Extensions" versions=">=10.0.0">
+            <uap:Extension Category="windows.fileTypeAssociation">
+                <uap:FileTypeAssociation Name="catalogodigital">
+                    <uap:SupportedFileTypes>
+                        <uap:FileType>.pdf</uap:FileType>
+                    </uap:SupportedFileTypes>
+                </uap:FileTypeAssociation>
+            </uap:Extension>
         </config-file>
     </platform>
 </plugin>
